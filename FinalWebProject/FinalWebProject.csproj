@@ -73,6 +73,7 @@
     <Content Include="Library\admin.aspx" />
     <Content Include="Library\Admindaya.aspx" />
     <Content Include="Library\bookdata.aspx" />
+    <Content Include="Library\BookDelete.aspx" />
     <Content Include="Library\Booktable.aspx" />
     <Content Include="Library\Confirm.aspx" />
     <Content Include="Library\Customerdata.aspx" />
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="Library\bookdata.aspx.designer.cs">
       <DependentUpon>bookdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\BookDelete.aspx.cs">
+      <DependentUpon>BookDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\BookDelete.aspx.designer.cs">
+      <DependentUpon>BookDelete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Library\Booktable.aspx.cs">
       <DependentUpon>Booktable.aspx</DependentUpon>
