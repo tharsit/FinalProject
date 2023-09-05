@@ -21,3 +21,12 @@ C:\Users\hp\Desktop\FinalWebProject\FinalWebProject\obj\Debug\FinalWebProject.pd
 C:\Users\hp\Desktop\FinalWebProject\FinalWebProject\bin\App_Data\bookstore.mdf
 C:\Users\hp\Desktop\FinalWebProject\FinalWebProject\bin\App_Data\bookstore_log.ldf
 C:\Users\hp\Desktop\FinalWebProject\FinalWebProject\obj\Debug\FinalWebProject.csprojResolveAssemblyReference.cache
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\obj\Debug\FinalWebProject.csprojResolveAssemblyReference.cache
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\obj\Debug\FinalWebProject.Properties.Resources.resources
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\obj\Debug\FinalWebProject.csproj.GenerateResource.Cache
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\obj\Debug\FinalWebProject.dll
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\bin\App_Data\bookstore.mdf
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\bin\App_Data\bookstore_log.ldf
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\bin\FinalWebProject.dll
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\bin\FinalWebProject.pdb
+C:\Users\Tempestarii\Documents\FinalProject\FinalWebProject\obj\Debug\FinalWebProject.pdb
