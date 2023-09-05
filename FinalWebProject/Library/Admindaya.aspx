@@ -5,13 +5,40 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style>
+     body
+        {
+            background-color:white;
+
+                }
+        table 
+        {
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+        </style>
 </head>
-<body bgcolor="#ffcc99" 
-    background="../image/lovepik-books-in-the-sky-background-image_400062995.jpg">
-    <form id="form1" runat="server">
+<body bgcolor=white>
+  
+    <form id="form2" runat="server">
+    
+   <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
+
     <div style="text-align:center" >
-          <asp:Label ID="Label4" runat="server" ForeColor="Black" Height="76px" style="font-size: 30pt;"
-            Text="Data of MCH Admins" Width="500px" BackColor="Aqua" BorderStyle="Solid"></asp:Label>
+        <h2> 
+            <asp:Label ID="Label4" runat="server" ForeColor="Black" Height="76px"
+            Text="This is Admin Informatons" Width="500px" ></asp:Label></h2> 
     </div>
     <div style="text-align:center">
     
@@ -21,6 +48,7 @@
             onselecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
     
     </div>
+     <div style="text-align:center">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         BackColor="#CCCCCC" BorderColor="#999999" BorderWidth="3px" 
         CellPadding="4" DataKeyNames="Gmail" DataSourceID="SqlDataSource1" 
@@ -48,6 +76,7 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#383838" />
     </asp:GridView>
+    </div>
     <div style="text-align:right" >
     <asp:Button ID="Button1" runat="server" Height="50px" Text="Admin Login" 
                  Width="200px" BackColor="#99CCFF" ForeColor="Black" 

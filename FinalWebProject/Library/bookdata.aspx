@@ -8,11 +8,12 @@
     <style>
         body
         {
-            background-color:#F5CBA7;
+            background-color:white;
                 }
         table 
         {
-            
+            margin-left: auto;
+            margin-right: auto;
             border-collapse: collapse;
             width: 100%;
         }
@@ -24,32 +25,44 @@
         }
         .style1
         {
+            margin-left: auto;
+            margin-right: auto;
             width: 631px;
-        }
-        .style2
-        {
-            width: 648px;
         }
         .style3
         {
+            margin-left: auto;
+            margin-right: auto;
             width: 542px;
+        }
+        .style4
+        {
+            margin-left: auto;
+            margin-right: auto;
+            width: 542px;
+            height: 56px;
+        }
+        .style5
+        {
+            margin-left: auto;
+            margin-right: auto;
+            height: 56px;
         }
         </style>
 </head>
-<body background="../image/lovepik-books-in-the-sky-background-image_400062995.jpg">
+<body>
     <form id="form1" runat="server">
-    <div>
-        <table>
-
-            <tr>
-                <td style="text-align: center;"><asp:Label  runat="server" Text="Books Adding" style="font-size: 30pt;"
-                Height="50px" Width="500px"></asp:Label></td>
-            </tr>
-            </table>
-            </div>
-            <br />
-            <br />
-            <div>
+     <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
             <table>
             <tr>
                 <td class="style3" style="text-align:right"><asp:Label ID="Label4"  runat="server" style="font-size: 18pt;" Text="BookName"></asp:Label> </td>
@@ -57,8 +70,8 @@
                          ontextchanged="TextBox2_TextChanged"></asp:TextBox></td>   
             </tr>
              <tr>
-                 <td class="style3"style="text-align:right"><asp:Label ID="Label3"  runat="server" style="font-size: 18pt;" Text="Category"></asp:Label></td>
-                 <td>
+                 <td class="style4"style="text-align:right"><asp:Label ID="Label3"  runat="server" style="font-size: 18pt;" Text="Category"></asp:Label></td>
+                 <td class="style5">
                      <asp:DropDownList ID="DropDownList1" runat="server">
                          <asp:ListItem Value="Fantascy">Fantascy</asp:ListItem>
                          <asp:ListItem Value="Fiction">Fiction</asp:ListItem>
@@ -100,15 +113,12 @@
     <br />
     <br />
     <div>
-        <table>
+        <table style="text-align: center;">
         <tr>
             
-             <td style="text-align: center;" class="style2">
-                <asp:Button ID="Button2" runat="server" BackColor="#33CCFF" 
-                    onclick="Button2_Click" Text="Add new Admin" Height="66px" />
-            </td>
-            <td style="text-align: center;" class="style1">
-                <asp:Button ID="Button1" runat="server" BackColor="#33CCFF" 
+             
+            <td style="text-align: center;">
+                <asp:Button ID="Button1" runat="server" 
                     onclick="Button1_Click" Text="Add new books" Height="65px" />
             </td>
              

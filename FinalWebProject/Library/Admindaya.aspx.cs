@@ -16,7 +16,7 @@ namespace FinalWebProject.Library
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("admin.aspx");
+            Response.Redirect("AdminPanel.aspx");
         }
 
         protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)

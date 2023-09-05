@@ -85,5 +85,10 @@ namespace FinalWebProject.Library
             }
         }
 
+        protected void Back_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminPanel.aspx");
+        }
+
     }
 }
