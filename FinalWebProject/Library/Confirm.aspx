@@ -6,24 +6,46 @@
 <head runat="server">
     <title></title>
      <style>
+         table
+         {
+              margin-left: auto;
+            margin-right: auto;
+             }
      .containerClass {
   position: relative;
 }
 
 .btnConfirmClass {
-  left: -50px;
+    margin-left: auto;
+            margin-right: auto;
 }
 
 .btnCancelClass {
-  right: -500px;
+    margin-left: auto;
+            margin-right: auto;
 }
 
         </style>
 </head>
-<body background="../image/lovepik-books-in-the-sky-background-image_400062995.jpg">
+<body>
 
     <form id="form1" runat="server">
-   <div style="height: 220px; width: 1038px;">
+    <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 128px; height: 178px" /></td>
+    </tr>
+    </table>
+       <hr />
+
+
+       
+   <div style="text-align:center">
+   
+        <asp:Label ID="Label6" runat="server" ForeColor="#009933" Style="font-size:15pt" Text="You can see your selected books here"></asp:Label>
+   
         <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" 
             GridLines="None" Width="1032px">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -39,68 +61,66 @@
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
     </div>
-    <div>
-        <asp:Label ID="lblconfirm" runat="server" ForeColor="#009933" 
+    <div style="text-align:center">
+        <asp:Label ID="lblconfirm" runat="server" ForeColor="#009933" Style="font-size:15pt"
             Text="Check your selected books are correct!"></asp:Label>
         <br />
 
         <table>
         <tr>
-        <td> <asp:Label ID="lblname" runat="server" 
+        <td> <asp:Label ID="lblname" runat="server"  Style=" font-size:15pt"
             Text="Name"></asp:Label></td>
-            <td><asp:TextBox ID="TextBox2" runat="server" Height="50px" Width="300px" 
+            <td><asp:TextBox ID="TextBox2" runat="server" Height="50px" Width="300px"  Style=" font-size:15pt"
                         ></asp:TextBox></td>
         
         </tr>
          <tr>
-        <td> <asp:Label ID="Label1" runat="server" 
+        <td> <asp:Label ID="Label1" runat="server"  Style=" font-size:15pt"
             Text="Address"></asp:Label></td>
-             <td><asp:TextBox ID="TextBox1" runat="server" Height="50px" Width="300px" 
+             <td><asp:TextBox ID="TextBox1" runat="server" Height="50px" Width="300px"  Style=" font-size:15pt"
                         ></asp:TextBox></td>
         
         </tr>
 
          <tr>
-        <td> <asp:Label ID="Label2" runat="server" 
+        <td> <asp:Label ID="Label2" runat="server"  Style=" font-size:15pt"
             Text="Phone Number"></asp:Label></td>
-             <td><asp:TextBox ID="TextBox3" runat="server" Height="50px" Width="300px" 
+             <td><asp:TextBox ID="TextBox3" runat="server" Height="50px" Width="300px"  Style=" font-size:15pt"
                         ></asp:TextBox></td>
         
         </tr>
 
          <tr>
-        <td > <asp:Label ID="Label3" runat="server" 
+        <td > <asp:Label ID="Label3" runat="server"  Style=" font-size:15pt"
             Text="Total Amount"></asp:Label></td>
             <td>
-                <asp:TextBox ID="txtTotal" runat="server" Height="50px" Width="300px" ReadOnly="True" 
+                <asp:TextBox ID="txtTotal" runat="server" Height="50px" Width="300px" ReadOnly="True"  Style=" font-size:15pt"
                         ></asp:TextBox>
             </td>
         </tr>
-        <tr>
-        <td><asp:Label ID="Label4" runat="server" ForeColor="#009933"
-            Text="Our system is allowed only with cash on delivery" ></asp:Label></td>
-        </tr>
         </table>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <asp:Label ID="lblMsg" runat="server" ForeColor="#3366FF"></asp:Label>
     
-   
-    
-      <div id="Div1" class="containerClass" runat="server">
-    <asp:Button ID="btnConfirm" runat="server" BackColor="#009933"
-        onclick="btnConfirm_Click" Text="Confirm" Height="53px"
-        CssClass="btnConfirmClass" />
-    <asp:Button ID="btnCancel" runat="server" BackColor="#cc0000"
-        onclick="btnCancel_Click" Text="Cancel" Height="53px"
-        CssClass="btnCancelClass" />
-    </div>
-
-    
-    </div>
+    <div style="text-align:center">
+            <asp:Label ID="Label4" runat="server" ForeColor="#009933" Style="font-size:15pt"
+            Text="Our system is allowed only with cash on delivery" ></asp:Label>
+            </div>
+             <div style="text-align:center">
+                <asp:Label ID="lblMsg" runat="server" Style="font-size:15pt" ForeColor="#3366FF"></asp:Label>
+            </div>
+              
+            <table>
+            <tr>
+                <td style="text-align:left">
+                <asp:Button ID="btnConfirm" runat="server"  Style=" font-size:15pt"
+        onclick="btnConfirm_Click" Text="Confirm" Height="53px" ForeColor="#009900" />
+        </td>
+                <td style="text-align:right"> 
+                    <asp:Button ID="btnCancel" runat="server"  Style=" font-size:15pt"
+        onclick="btnCancel_Click" Text="Cancel" Height="53px" ForeColor="Red"
+         /></td>
+            </tr>
+            </table>  
     </form>
 </body>
 </html>
