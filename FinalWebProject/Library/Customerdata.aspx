@@ -5,13 +5,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <style >
+        body
+        {
+            background-color:white;
+
+                }
+        table 
+        {
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+
+        th, td {
+            border: none;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
 </head>
-<body background="../image/lovepik-books-in-the-sky-background-image_400062995.jpg" 
-    style="height: 370px">
+<body  bgcolor=white>
     <form id="form1" runat="server">
-    <div>
-    
-    </div>
+    <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource1" 
         ForeColor="#333333" GridLines="None" Width="1111px">

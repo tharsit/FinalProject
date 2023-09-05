@@ -10,11 +10,12 @@
          
         body
         {
-            background-color:#F5CBA7;
+            background-color:white;
                 }
         table 
         {
-            
+              margin-left: auto;
+            margin-right: auto;
             border-collapse: collapse;
             width: 100%;
         }
@@ -26,16 +27,20 @@
         }
     </style>
 </head>
-<body background="../image/lovepik-books-in-the-sky-background-image_400062995.jpg">
+<body >
     <form id="form1" runat="server">
    
-            <div style="text-align: center">
-    
-        <asp:Label ID="Label4" runat="server" ForeColor="Black" Height="76px" style="font-size: 30pt;"
-            Text="Sign up for MCH Admin" Width="500px" BackColor="Aqua" BorderStyle="Solid"></asp:Label>
-    
-    </div>
-   
+           <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label4" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
 
     <div>
     <table>
@@ -69,14 +74,16 @@
 
 
         </table>
-
+        <div style="text-align:center">
         <asp:CompareValidator ID="CompareValidator1" runat="server" 
             ErrorMessage="Passwords do not match" ControlToCompare="TextBoxpw" 
             ControlToValidate="TextBoxcpw" ForeColor="Red"></asp:CompareValidator>
             
-         
+         </div>
           <br />
+          <div style="text-align:center">
         <asp:Label ID="lblMsg" runat="server"></asp:Label>
+          </div>
         <br />
         
         <div style="text-align: center">

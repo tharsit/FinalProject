@@ -7,10 +7,13 @@
     <title></title>
     <style>
         body {
-            background-color: #F5CBA7;
+            background-color: white;
         }
 
-        table {
+        table 
+        {
+             margin-left: auto;
+            margin-right: auto;
             border-collapse: collapse;
             width: 100%;
         }
@@ -25,12 +28,17 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="text-align: center">
-            <asp:Label ID="Label2" runat="server" ForeColor="Black" Height="76px" style="font-size: 30pt;" Text="Recover My Password" Width="500px" BackColor="Aqua" BorderStyle="Solid"></asp:Label>
-        </div>
-        <br />
-        <br />
-        <br />
+        <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
         <div style="text-align: center">
             <table>
                 <tr>

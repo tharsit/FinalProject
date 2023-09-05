@@ -116,8 +116,8 @@
     </div>
      <div style="text-align: right;">
     
-         <asp:Button ID="Back" runat="server" Text="Back" Height="52px" 
-             onclick="Back_Click" Width="178px" />
+         <asp:Button ID="Button1" runat="server" Text="Back" Height="38px" 
+             Width="98px" />
     
     </div>
     </form>
