@@ -35,7 +35,7 @@
     <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
     <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
             Style="font-size: 50pt;"></asp:Label></td>
-    <td><img src="..\image\images.png" style="width: 128px; height: 178px" /></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
     </tr>
     </table>
        <hr />
@@ -84,7 +84,7 @@
 
          <tr>
         <td> <asp:Label ID="Label2" runat="server"  Style=" font-size:15pt"
-            Text="Phone Number"></asp:Label></td>
+            Text="Phone Number"></asp:Label>&nbsp;,</td>
              <td><asp:TextBox ID="TextBox3" runat="server" Height="50px" Width="300px"  Style=" font-size:15pt"
                         ></asp:TextBox></td>
         
