@@ -39,7 +39,7 @@ namespace FinalWebProject.Library
                             if (password.Equals(txtpassword.Text))
                             {
                                 Session["Gmail"] = txtgmail.Text;
-                                Response.Redirect("bookdata.aspx");
+                                Response.Redirect("AdminPanel.aspx");
                             }
                             else
                             {

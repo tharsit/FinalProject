@@ -20,30 +20,26 @@
                     <asp:TextBox ID="TextBox1" runat="server" Height="28px" Width="500px"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:Button ID="btnSearch" runat="server" Text="Search" />
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" 
+                        onclick="btnSearch_Click" />
                 </td>
             </tr>
         </table>
     </div>
 
     <div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-            DataKeyNames="Book_ID" DataSourceID="sqlBookTable">
-            <Columns>
-                <asp:BoundField DataField="Book_ID" HeaderText="Book_ID" InsertVisible="False" 
-                    ReadOnly="True" SortExpression="Book_ID" />
-                <asp:BoundField DataField="BookName" HeaderText="BookName" 
-                    SortExpression="BookName" />
-                <asp:BoundField DataField="Category" HeaderText="Category" 
-                    SortExpression="Category" />
-                <asp:BoundField DataField="Author" HeaderText="Author" 
-                    SortExpression="Author" />
-                <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-            </Columns>
-        </asp:GridView>
+        <asp:GridView ID="BookTable" runat="server" 
+    DataKeyNames="Book_ID" AutoGenerateEditButton="True"
+    onrowediting="BookTable_RowEditing" 
+            onrowcancelingedit="BookTable_RowCancelingEdit" 
+            onrowupdating="BookTable_RowUpdating">
+</asp:GridView> 
+
+
         <asp:SqlDataSource ID="sqlBookTable" runat="server" ConnectionString="<%$ ConnectionStrings:booktable %>"
             SelectCommand="SELECT * FROM [Booktable]"></asp:SqlDataSource>
     </div>
+    <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </form>
 </body>
 </html>

@@ -73,7 +73,7 @@
             <br />
             <br />
         </asp:Panel>
-        <div style="margin-right: 1200px; height: 69px; width: 1231px;">
+        <div style="margin-right: auto; height: 69px; width: 1231px; margin-left: auto;">
             <table>
                 <tr>
                     <td style="text-align: center" class="style4">
@@ -135,10 +135,10 @@
         <br />
         <br />
         <br />
-        <div>
+        <div style="margin-left: auto; margin-right: auto;">
             <asp:TextBox ID="TextBox1" runat="server" Height="52px" OnTextChanged="TextBox1_TextChanged"
-                Placeholder="Enter Book Name or Author Name to search" Style="text-align: center"
-                Width="842px" AutoPostBack="True"></asp:TextBox>
+                Placeholder="Enter Book Name or Author Name to search" Style="text-align: center;
+                margin-left: auto; margin-right: auto;" Width="842px" AutoPostBack="True"></asp:TextBox>
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search" Width="193px"
                 Height="52px" /></div>
         <asp:GridView ID="GridView1" runat="server" DataKeyNames="Book_ID" AutoGenerateSelectButton="True"
