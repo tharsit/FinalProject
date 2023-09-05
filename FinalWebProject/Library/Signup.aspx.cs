@@ -53,7 +53,7 @@ namespace FinalWebProject.Library
                     insertCommand.Parameters.AddWithValue("@Password", TextBoxpw.Text);
                     insertCommand.Parameters.AddWithValue("@Confirmpassword", TextBoxcpw.Text);
                     insertCommand.ExecuteNonQuery();
-                    Response.Redirect("AdminPanel.aspx");
+                    Response.Redirect("Admindaya.aspx");
                 }
 
                 con.Close();

@@ -60,7 +60,7 @@ namespace FinalWebProject.Library
                             else
                             {
                                 lblMessage.Text = "";
-                                AdminTable.DataKeyNames = new string[] { "Id" };
+                                AdminTable.DataKeyNames = new string[] { "Admin_ID" };
 
                                 AdminTable.DataSource = ds;
                                 AdminTable.DataBind();
@@ -75,7 +75,7 @@ namespace FinalWebProject.Library
             string connectionString = ConfigurationManager.ConnectionStrings["booktable"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "DELETE FROM admindata WHERE Id = @Id";
+                string query = "DELETE FROM admindata WHERE Admin_ID = @Id";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Id", Id);

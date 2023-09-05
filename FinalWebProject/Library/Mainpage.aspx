@@ -10,7 +10,7 @@
         {
             margin-left: auto;
             margin-right: auto;
-            background-color: white;
+            background-color:#96B6C5;
         }
         
         
@@ -65,7 +65,7 @@
 <body>
     <form id="form1" runat="server" clientidmode="Inherit">
     
-    <table style="text-align: center;">
+    <table style="text-align: center;" >
     <tr>
     <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
     <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
@@ -113,20 +113,16 @@
             </table>
         
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-     
+        
        
         
             <div style="text-align:center">
                 <asp:TextBox ID="TextBox1" runat="server" Height="52px" OnTextChanged="TextBox1_TextChanged"
                 Placeholder="Enter Book Name or Author Name to search" Style="text-align: center;
                 margin-left: auto; margin-right: auto;" Width="861px" AutoPostBack="True"></asp:TextBox>
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search" Width="309px" Style="text-align: center; font-size:20pt"
-                Height="52px" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search" 
+                    Width="309px" Style="text-align: center; font-size:20pt"
+                Height="57px" />
         </div>
         <asp:GridView ID="GridView1" runat="server" DataKeyNames="Book_ID" AutoGenerateSelectButton="True"
             OnRowCommand="GridView1_RowCommand" SelectionMode="Single" Width="1184px" CellPadding="4"

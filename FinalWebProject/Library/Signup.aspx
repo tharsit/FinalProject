@@ -10,7 +10,7 @@
          
         body
         {
-            background-color:white;
+            background-color:#96B6C5;
                 }
         table 
         {
@@ -33,7 +33,7 @@
            <table style="text-align: center;">
     <tr>
     <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
-    <td style="text-align:center"><asp:Label ID="Label4" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+    <td style="text-align:center"  ><asp:Label ID="Label4" runat="server" ForeColor="#0066FF"  Text="M.C.H Book Shop"
             Style="font-size: 50pt;"></asp:Label></td>
     <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
     </tr>

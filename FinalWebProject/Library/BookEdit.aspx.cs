@@ -117,8 +117,13 @@ namespace FinalWebProject.Library
             BindGridView();
 
         }
+
+        protected void btnBack_On_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminPanel.aspx");
+        }
+
+
     }
 
-
 }
-

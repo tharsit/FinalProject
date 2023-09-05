@@ -7,7 +7,7 @@
     <style >
         body
         {
-            background-color:white;
+            background-color:#96B6C5;
 
                 }
         table 
@@ -56,8 +56,10 @@
     DataKeyNames="Book_ID" onrowediting="BookTable_RowEditing" 
     onrowcancelingedit="BookTable_RowCancelingEdit" 
     onrowupdating="BookTable_RowUpdating" 
-    onselectedindexchanged="BookTable_SelectedIndexChanged" 
+    onselectedindexchanged="BookTable_SelectedIndexChanged" CellPadding="4" 
+            ForeColor="#333333" GridLines="None" 
     >
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
     <Columns>
         <asp:CommandField ShowEditButton="True" />
         <asp:TemplateField HeaderText="Book_ID">
@@ -98,6 +100,16 @@
             </EditItemTemplate>
         </asp:TemplateField>
     </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
 </asp:GridView>
 
 
@@ -117,7 +129,7 @@
      <div style="text-align: right;">
     
          <asp:Button ID="Button1" runat="server" Text="Back" Height="38px" 
-             Width="98px" />
+             Width="98px" onclick="btnBack_On_Click" />
     
     </div>
     </form>

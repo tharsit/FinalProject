@@ -7,7 +7,7 @@
     <style>
     body
         {
-            background-color:white;
+            background-color:#96B6C5;
 
                 }
         table 
@@ -52,11 +52,14 @@
     <div>
         <asp:GridView ID="AdminTable" runat="server" AutoGenerateColumns="False" DataKeyNames="Gmail"
             OnRowEditing="AdminTable_RowEditing" OnRowCancelingEdit="AdminTable_RowCancelingEdit"
-            OnRowUpdating="AdminTable_RowUpdating" OnSelectedIndexChanged="AdminTable_SelectedIndexChanged"
+            OnRowUpdating="AdminTable_RowUpdating" 
+            OnSelectedIndexChanged="AdminTable_SelectedIndexChanged" CellPadding="4" 
+            ForeColor="#333333" GridLines="None"
             >
+            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
             <asp:CommandField ShowEditButton="true" />
-                <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="true" />
+                <asp:BoundField DataField="Admin_ID" HeaderText="Admin_ID" ReadOnly="true" />
                 <asp:TemplateField HeaderText="UserName">
                     <ItemTemplate>
                         <asp:Label ID="lbl_UserName" runat="server" Text='<%# Eval("UserName") %>'></asp:Label>
@@ -91,7 +94,18 @@
                 </asp:TemplateField>
                 
             </Columns>
+            <EditRowStyle BackColor="#999999" />
+            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#E9E7E2" />
+            <SortedAscendingHeaderStyle BackColor="#506C8C" />
+            <SortedDescendingCellStyle BackColor="#FFFDF8" />
+            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
         <div>
             <asp:SqlDataSource ID="sqlAdminTable" runat="server" ConnectionString="<%$ ConnectionStrings:booktable %>"
                 SelectCommand="SELECT * FROM [admindata]"></asp:SqlDataSource>

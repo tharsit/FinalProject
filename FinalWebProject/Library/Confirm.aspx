@@ -27,7 +27,7 @@
 
         </style>
 </head>
-<body>
+<body bgcolor=#96B6C5>
 
     <form id="form1" runat="server">
     <table style="text-align: center;">

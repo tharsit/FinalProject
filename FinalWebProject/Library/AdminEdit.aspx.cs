@@ -39,7 +39,7 @@ namespace FinalWebProject.Library
             // Update the book record in the database using the ID, UserName, and Gmail variables
 
             // Example code to update the book record using SQL query
-            string updateQuery = "UPDATE admindata SET UserName = @UserName, Gmail = @Gmail, Password = @Password,Confirmpassword = @Confirmpassword WHERE ID = @ID";
+            string updateQuery = "UPDATE admindata SET UserName = @UserName, Gmail = @Gmail, Password = @Password,Confirmpassword = @Confirmpassword WHERE Admin_ID = @ID";
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString))
             {
                 using (SqlCommand com = new SqlCommand(updateQuery, con))
@@ -101,7 +101,7 @@ namespace FinalWebProject.Library
                             else
                             {
                                 lblMessage.Text = "";
-                                AdminTable.DataKeyNames = new string[] { "ID" };
+                                AdminTable.DataKeyNames = new string[] { "Admin_ID" };
 
                                 AdminTable.DataSource = ds;
                                 AdminTable.DataBind();

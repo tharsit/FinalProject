@@ -7,7 +7,7 @@
     <style >
         body
         {
-            background-color:white;
+            background-color:#96B6C5;
 
                 }
         table 
