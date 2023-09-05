@@ -4,15 +4,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title></title>
+    <style >
+        body
+        {
+            background-color:white;
+
+                }
+        table 
+        {
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+
+        th, td {
+            border: none;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="text-align: center;">
-        <asp:Label ID="Label11" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
-            Style="font-size: 50pt;"></asp:Label>
-        <br />
-        <br />
-    </div>
+   <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
     <div>
         <table style="margin-left: auto; margin-right: auto;">
             <tr>
@@ -87,7 +111,15 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     </div>
-    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+     <div style="text-align: center;">
+    <asp:Label ID="lblMessage" runat="server" ForeColor="#FF3300"></asp:Label>
+    </div>
+     <div style="text-align: right;">
+    
+         <asp:Button ID="Back" runat="server" Text="Back" Height="52px" 
+             onclick="Back_Click" Width="178px" />
+    
+    </div>
     </form>
 </body>
 </html>

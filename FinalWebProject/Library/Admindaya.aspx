@@ -78,7 +78,7 @@
     </asp:GridView>
     </div>
     <div style="text-align:right" >
-    <asp:Button ID="Button1" runat="server" Height="50px" Text="Admin Login" 
+    <asp:Button ID="Button1" runat="server" Height="50px" Text="Back" 
                  Width="200px" BackColor="#99CCFF" ForeColor="Black" 
             onclick="Button1_Click"  />
     </div>
