@@ -73,12 +73,14 @@
     <Content Include="image\lovepik-books-in-the-sky-background-image_400062995.jpg" />
     <Content Include="Library\admin.aspx" />
     <Content Include="Library\Admindaya.aspx" />
+    <Content Include="Library\AdminDelete.aspx" />
+    <Content Include="Library\AdminEdit.aspx" />
     <Content Include="Library\bookdata.aspx" />
     <Content Include="Library\BookDelete.aspx" />
     <Content Include="Library\Booktable.aspx" />
     <Content Include="Library\Confirm.aspx" />
     <Content Include="Library\Customerdata.aspx" />
-    <Content Include="Library\EditBooks.aspx" />
+    <Content Include="Library\BookEdit.aspx" />
     <Content Include="Library\Mainpage.aspx" />
     <Content Include="Library\pwrecover.aspx" />
     <Content Include="Library\Signup.aspx" />
@@ -145,6 +147,20 @@
     <Compile Include="Library\Admindaya.aspx.designer.cs">
       <DependentUpon>Admindaya.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Library\AdminDelete.aspx.cs">
+      <DependentUpon>AdminDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\AdminDelete.aspx.designer.cs">
+      <DependentUpon>AdminDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\AdminEdit.aspx.cs">
+      <DependentUpon>AdminEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\AdminEdit.aspx.designer.cs">
+      <DependentUpon>AdminEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Library\bookdata.aspx.cs">
       <DependentUpon>bookdata.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,12 +197,12 @@
     <Compile Include="Library\Customerdata.aspx.designer.cs">
       <DependentUpon>Customerdata.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Library\EditBooks.aspx.cs">
-      <DependentUpon>EditBooks.aspx</DependentUpon>
+    <Compile Include="Library\BookEdit.aspx.cs">
+      <DependentUpon>BookEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Library\EditBooks.aspx.designer.cs">
-      <DependentUpon>EditBooks.aspx</DependentUpon>
+    <Compile Include="Library\BookEdit.aspx.designer.cs">
+      <DependentUpon>BookEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Library\Mainpage.aspx.cs">
       <DependentUpon>Mainpage.aspx</DependentUpon>

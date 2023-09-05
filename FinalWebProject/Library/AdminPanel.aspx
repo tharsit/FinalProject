@@ -40,13 +40,14 @@
                 </td>
                 <td>
                     <asp:Button ID="btnEditBook" runat="server" Text="Edit Books" 
-                        style="margin-left: 0px" Width="150px" 
+                        style="margin-left: 0px" Width="150px" onclick="btnEditBook_Click" 
                        />
                 </td>
             </tr>
             <tr>
                 <td colspan = 2>
-                    <asp:Button ID="btnDelete" runat="server" Text="Delete Books" Width="300px" />
+                    <asp:Button ID="btnDelete" runat="server" Text="Delete Books" Width="300px" 
+                        onclick="btnDelete_Click" />
                 </td>              
             </tr>
         </table>
@@ -57,17 +58,18 @@
         <table style = "margin-left : auto ; margin-right : auto;">
             <tr>
                 <td>
-                    <asp:Button ID="btnAddAdmins" runat="server" Text="Add Admins" Width="150px" />
+                    <asp:Button ID="btnAddAdmins" runat="server" Text="Add Admins" Width="150px" 
+                        onclick="btnAddAdmins_Click" />
                 </td>
                 <td>
                     <asp:Button ID="btnEditAdmins" runat="server" Text="Edit Admins" 
-                        Width="150px" />
+                        Width="150px" onclick="btnEditAdmins_Click" />
                 </td>
             </tr>
             <tr>
                 <td colspan = 2>
                     <asp:Button ID="btnDeleteAdmins" runat="server" Text="Delete Admins" 
-                        Width="300px" />
+                        Width="300px" onclick="btnDeleteAdmins_Click" />
                 </td>              
             </tr>
         </table>
