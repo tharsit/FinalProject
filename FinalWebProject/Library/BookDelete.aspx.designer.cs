@@ -10,7 +10,7 @@
 namespace FinalWebProject.Library {
     
     
-    public partial class EditBooks {
+    public partial class BookDelete {
         
         /// <summary>
         /// Head1 control.
