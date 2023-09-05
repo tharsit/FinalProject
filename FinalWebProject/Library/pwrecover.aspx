@@ -63,7 +63,10 @@
             <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Passwords do not match" ControlToCompare="newpw" ControlToValidate="cnewpw" ForeColor="Red"></asp:CompareValidator>
         </div>
         <p>
+            
         <div style="text-align:center">
+        <asp:Label ID="lblMessage" runat="server" style = "text-align:center"></asp:Label>
+        <br />
             <asp:Button ID="btnconfirm" runat="server" Text="Confirm" ForeColor="#0099FF" Height="50px" Width="200px" OnClick="btnconfirm_Click" />
         </div>
         </p>

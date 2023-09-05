@@ -1,7 +1,11 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace FinalWebProject.Library
 {
@@ -9,19 +13,42 @@ namespace FinalWebProject.Library
     {
         protected void btnconfirm_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\USERS\MAKKG\ONEDRIVE\DOCUMENTS\VISUAL STUDIO 2010\PROJECTS\FINALWEBPROJECT\FINALWEBPROJECT\APP_DATA\LOGIN.MDF;Integrated Security=True";
+            string gmail = txtgmail.Text;
+            string newPassword = cnewpw.Text;
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            // Validate user input
+            if (!IsValidEmail(gmail))
             {
-                string gmail = txtgmail.Text;
-                string newPassword = cnewpw.Text;
+                lblMessage.Text = "Please enter a valid email address.";
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
 
+            // Update the user's password
+            UpdatePassword(gmail, newPassword);
+
+            // Provide user feedback
+            lblMessage.Text = "Password updated successfully.";
+            lblMessage.ForeColor = System.Drawing.Color.Green;
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            // Use regular expression to validate email address format
+            string emailPattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            return System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern);
+        }
+
+        private void UpdatePassword(string email, string newPassword)
+        {
+            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString))
+            {
                 string selectQuery = "SELECT Gmail FROM admindata WHERE Gmail = @Gmail";
 
                 using (SqlCommand selectCmd = new SqlCommand(selectQuery, con))
                 {
-                    selectCmd.Parameters.AddWithValue("@Gmail", gmail);
-                   
+                    selectCmd.Parameters.AddWithValue("@Gmail", email);
+
                     con.Open();
 
                     using (SqlDataReader reader = selectCmd.ExecuteReader())
@@ -30,21 +57,21 @@ namespace FinalWebProject.Library
                         {
                             reader.Close();
 
-                            string updateQuery = "UPDATE admindata SET password = @Password";
+                            string updateQuery = "UPDATE admindata SET password = @Password WHERE Gmail = @Gmail";
 
                             using (SqlCommand updateCmd = new SqlCommand(updateQuery, con))
                             {
                                 updateCmd.Parameters.AddWithValue("@Password", newPassword);
+                                updateCmd.Parameters.AddWithValue("@Gmail", email);
                                 updateCmd.ExecuteNonQuery();
                             }
 
-                            Label2.Text = "Password updated successfully.";
-                            Label2.ForeColor = System.Drawing.Color.Green;
                             Response.Redirect("admin.aspx");
                         }
                         else
                         {
-                            Label2.Text = "Please check your Gmail!";
+                            lblMessage.Text = "Please check your Gmail!";
+                            lblMessage.ForeColor = System.Drawing.Color.Red;
                         }
                     }
                 }
@@ -52,4 +79,3 @@ namespace FinalWebProject.Library
         }
     }
 }
-

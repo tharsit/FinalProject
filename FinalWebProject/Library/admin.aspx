@@ -76,7 +76,7 @@
         <div style="text-align: center">
             
             <asp:HyperLink ID="HyperLink1" runat="server" BackColor="#FF9999" Style=" font-size:15pt"
-                NavigateUrl="~/Library/Signup.aspx">Forget Password?</asp:HyperLink>
+                NavigateUrl="~/Library/pwrecover.aspx">Forget Password?</asp:HyperLink>
             
         </div>
     

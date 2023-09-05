@@ -26,7 +26,6 @@ namespace FinalWebProject.Library
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString);
                 con.Open();
 
-              
                 string selectQuery = "SELECT COUNT(*) FROM [admindata] WHERE Username = @Username";
                 SqlCommand selectCommand = new SqlCommand(selectQuery, con);
                 selectCommand.Parameters.AddWithValue("@Username", TextBox1.Text);
@@ -39,7 +38,14 @@ namespace FinalWebProject.Library
                 }
                 else
                 {
-                   
+                    // Validate email format
+                    if (!IsValidEmail(TextBox2.Text))
+                    {
+                        lblMsg.Text = "Please enter a valid email address.";
+                        lblMsg.ForeColor = System.Drawing.Color.Red;
+                        return;
+                    }
+
                     string insertQuery = "INSERT INTO [admindata] (Username, Gmail, Password, Confirmpassword) VALUES (@Username, @Gmail, @Password, @Confirmpassword)";
                     SqlCommand insertCommand = new SqlCommand(insertQuery, con);
                     insertCommand.Parameters.AddWithValue("@Username", TextBox1.Text);
@@ -58,8 +64,185 @@ namespace FinalWebProject.Library
             }
         }
 
+        private bool IsValidEmail(string email)
+        {
+            // Use regular expression to validate email address format
+            string emailPattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+            return System.Text.RegularExpressions.Regex.IsMatch(email, emailPattern);
+        }
+
+
     }
 }
  
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
