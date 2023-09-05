@@ -76,6 +76,7 @@
     <Content Include="Library\Booktable.aspx" />
     <Content Include="Library\Confirm.aspx" />
     <Content Include="Library\Customerdata.aspx" />
+    <Content Include="Library\EditBooks.aspx" />
     <Content Include="Library\Mainpage.aspx" />
     <Content Include="Library\pwrecover.aspx" />
     <Content Include="Library\Signup.aspx" />
@@ -170,6 +171,13 @@
     </Compile>
     <Compile Include="Library\Customerdata.aspx.designer.cs">
       <DependentUpon>Customerdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\EditBooks.aspx.cs">
+      <DependentUpon>EditBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\EditBooks.aspx.designer.cs">
+      <DependentUpon>EditBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Library\Mainpage.aspx.cs">
       <DependentUpon>Mainpage.aspx</DependentUpon>

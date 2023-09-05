@@ -14,6 +14,35 @@
         <br />
     </div>
     <div>
+        <table style="margin-left: auto; margin-right: auto;">
+            <tr>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server" Height="28px" Width="500px"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" />
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+            DataKeyNames="Book_ID" DataSourceID="sqlBookTable">
+            <Columns>
+                <asp:BoundField DataField="Book_ID" HeaderText="Book_ID" InsertVisible="False" 
+                    ReadOnly="True" SortExpression="Book_ID" />
+                <asp:BoundField DataField="BookName" HeaderText="BookName" 
+                    SortExpression="BookName" />
+                <asp:BoundField DataField="Category" HeaderText="Category" 
+                    SortExpression="Category" />
+                <asp:BoundField DataField="Author" HeaderText="Author" 
+                    SortExpression="Author" />
+                <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="sqlBookTable" runat="server" ConnectionString="<%$ ConnectionStrings:booktable %>"
+            SelectCommand="SELECT * FROM [Booktable]"></asp:SqlDataSource>
     </div>
     </form>
 </body>

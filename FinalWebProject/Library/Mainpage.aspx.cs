@@ -47,6 +47,8 @@ namespace FinalWebProject.Library
                             if (ds.Tables[0].Rows.Count == 0)
                             {
                                 lblMessage.Text = "No books found.";
+                                GridView1.DataSource = null;
+                                GridView1.DataBind();
                             }
                             else
                             {
