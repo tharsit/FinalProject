@@ -10,13 +10,15 @@
         {
             margin-left: auto;
             margin-right: auto;
-            background-color: #E0FFFF;
+            background-color: white;
         }
         
         
         
         table
-        {
+        {   
+            margin-left: auto;
+            margin-right: auto;
             border-collapse: collapse;
             height: 94px;
             margin-top: 0px;
@@ -60,44 +62,41 @@
         }
     </style>
 </head>
-<body style="height: 942px" background="../image/lovepik-books-in-the-sky-background-image_400062995.jpg">
-    <form id="form1" runat="server">
-    <asp:Panel ID="Panel1" runat="server" Height="638px">
-        <asp:Panel ID="Panel2" runat="server" Height="101px" Width="1196px">
-            <div style="text-align: center;">
-                <asp:Label ID="Label11" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
-                    Style="font-size: 50pt;"></asp:Label>
-                <br />
-                <br />
-            </div>
-            <br />
-            <br />
-        </asp:Panel>
-        <div style="margin-right: auto; height: 69px; width: 1231px; margin-left: auto;">
+<body>
+    <form id="form1" runat="server" clientidmode="Inherit">
+    
+    <table style="text-align: center;">
+    <tr>
+    <td><img src="..\image\images.png" style="width: 157px; height: 178px" /></td>
+    <td style="text-align:center"><asp:Label ID="Label5" runat="server" ForeColor="#0066FF" Text="M.C.H Book Shop"
+            Style="font-size: 50pt;"></asp:Label></td>
+    <td><img src="..\image\images.png" style="width: 128px; height: 178px" /></td>
+    </tr>
+    </table>
+        
+        
+        <hr />
+       
+       
             <table>
                 <tr>
                     <td style="text-align: center" class="style4">
-                        <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Top Three Books in Myanmar"
-                            Style="font-size: 20pt; text-align: center"></asp:Label>
+                      <h1>  <asp:Label ID="Label1" runat="server" ForeColor="Black" Text="Top Three Books in Myanmar"
+                            Style="font-size: 20pt; text-align: center"></asp:Label></h1>
                     </td>
                 </tr>
             </table>
-            <br />
-            <br />
-            <br />
-            <br />
+            
             <table>
                 <tr>
                     <td class="style8" style="text-align: center">
-                        <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Top 1" Style="text-align: center"></asp:Label>
+                      <h2>  <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Top 1" Style="text-align: center"></asp:Label></h2>
                     </td>
                     <td class="style6" style="text-align: center">
-                        <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Top 2" Style="font-size: 10pt;
-                            text-align: center"></asp:Label>
+                       <h2>    <asp:Label ID="Label3" runat="server" ForeColor="Black" Text="Top 2" Style="text-align: center"></asp:Label></h2>
                     </td>
                     <td class="style5" style="text-align: center">
-                        <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Top 3" Style="font-size: 10pt;
-                            text-align: center"></asp:Label>
+                     <h2>      <asp:Label ID="Label4" runat="server" ForeColor="Black" Text="Top 3" Style="text-align: center"></asp:Label></h2>
                     </td>
                 </tr>
                 <tr>
@@ -112,35 +111,23 @@
                     </td>
                 </tr>
             </table>
-        </div>
+        
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <div style="margin-left: auto; margin-right: auto;">
-            <asp:TextBox ID="TextBox1" runat="server" Height="52px" OnTextChanged="TextBox1_TextChanged"
+     
+       
+        
+            <div style="text-align:center">
+                <asp:TextBox ID="TextBox1" runat="server" Height="52px" OnTextChanged="TextBox1_TextChanged"
                 Placeholder="Enter Book Name or Author Name to search" Style="text-align: center;
-                margin-left: auto; margin-right: auto;" Width="842px" AutoPostBack="True"></asp:TextBox>
-            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search" Width="193px"
-                Height="52px" /></div>
+                margin-left: auto; margin-right: auto;" Width="861px" AutoPostBack="True"></asp:TextBox>
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search" Width="309px" Style="text-align: center; font-size:20pt"
+                Height="52px" />
+        </div>
         <asp:GridView ID="GridView1" runat="server" DataKeyNames="Book_ID" AutoGenerateSelectButton="True"
             OnRowCommand="GridView1_RowCommand" SelectionMode="Single" Width="1184px" CellPadding="4"
             ForeColor="#333333" GridLines="None" EnablePersistedSelection="True">
@@ -159,23 +146,24 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:booktable %>"
             SelectCommand="SELECT * FROM [Booktable]" OnSelecting="SqlDataSource1_Selecting">
         </asp:SqlDataSource>
+        <div  style="text-align:center">
+            <asp:Label ID="lblMessage" runat="server" style="font-size:20pt" ForeColor="Red"></asp:Label>
+        </div>
         <table>
             <tr>
                 <td style="text-align: left">
-                    <asp:Button ID="btncart" runat="server" OnClick="btncart_Click" Text="Cart" Style="text-align: center"
+                    <asp:Button ID="btncart" runat="server" OnClick="btncart_Click" Text="Cart" Style="text-align: center; font-size:20pt"
                         Height="50px" Width="204px" />
                 </td>
                 <td style="text-align: right">
-                    <asp:Button ID="Button1" runat="server" Height="50px" Text="Admin" Style="text-align: center"
+                    <asp:Button ID="Button1" runat="server" Height="50px" Text="Admin" Style="text-align: center; font-size:20pt"
                         Width="210px" OnClick="Button1_Click" />
                 </td>
             </tr>
         </table>
-        </div>
-    </asp:Panel>
-    <div style="height: 153px">
-    </div>
-    <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
+     
+   
+    
     </form>
 </body>
 </html>

@@ -46,7 +46,7 @@ namespace FinalWebProject.Library
 
                             if (ds.Tables[0].Rows.Count == 0)
                             {
-                                lblMessage.Text = "No books found.";
+                                lblMessage.Text = "This book is not available right now & We will try to add it soon";
                                 GridView1.DataSource = null;
                                 GridView1.DataBind();
                             }
