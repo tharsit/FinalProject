@@ -75,7 +75,11 @@ namespace FinalWebProject.Library
                 Response.Redirect("Mainpage.aspx");            
 
             }
-            
+            if (Session["cart"] == null)
+            {
+                Response.Redirect("Mainpage.aspx");
+            }
+
         }
     }
 }
