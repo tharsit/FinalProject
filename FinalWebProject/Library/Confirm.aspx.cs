@@ -15,7 +15,7 @@ namespace FinalWebProject.Library
             {
                 List<CartItem> cartItems = (List<CartItem>)Session["cart"];
                 int totalPriceAllItems = 0;
-               
+
                 DataTable dt = new DataTable();
                 dt.Columns.Add("BookName", typeof(string));
                 dt.Columns.Add("Price", typeof(int));
@@ -29,57 +29,56 @@ namespace FinalWebProject.Library
                     row["Price"] = cartItem.Price;
                     row["Quantity"] = cartItem.Count;
                     int totalItemPrice = cartItem.Price * cartItem.Count;
-                    row["TotalPrice"] = cartItem.Price * cartItem.Count;
+                    row["TotalPrice"] = totalItemPrice;
                     dt.Rows.Add(row);
                     totalPriceAllItems += totalItemPrice;
                 }
                 txtTotal.Text = totalPriceAllItems.ToString();
-               
+
                 GridView2.DataSource = dt;
                 GridView2.DataBind();
+                Session["cart"] = cartItems;
             }
         }
 
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
-            int Book_id, Quantity, Total;
-            Total = 0;
             List<CartItem> cartItems = (List<CartItem>)Session["cart"];
-            foreach (CartItem cartItem in cartItems)
+            if (cartItems != null && TextBox1 != null && TextBox2 != null && TextBox3 != null)
             {
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString);
-             
-                Book_id = cartItem.Book_ID;
-                Quantity = cartItem.Count;
-                int totalItemPrice = cartItem.Price * cartItem.Count;
-                Total += totalItemPrice;
-                string insert = "insert into CustomerData(Name,Address,Phone_Number,Book_ID,Quantity,Price,Order_ID) values (@Name,@Address,@Phone_Number,@Book_ID,@Quantity,@Price,@Order_ID)";
-                SqlCommand com = new SqlCommand(insert, con);
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString))
+                {
+                    con.Open();
+                    foreach (CartItem cartItem in cartItems)
+                    {
+                        string insert = "insert into CustomerData(Customer_Name,Address,Phone_Number,Book_ID,Quantity,Price) values (@Name,@Address,@Phone_Number,@Book_ID,@Quantity,@Price)";
+                        using (SqlCommand com = new SqlCommand(insert, con))
+                        {
+                            com.Parameters.AddWithValue("@Name", TextBox2.Text);
+                            com.Parameters.AddWithValue("@Address", TextBox1.Text);
+                            com.Parameters.AddWithValue("@Phone_Number", TextBox3.Text);
+                            com.Parameters.AddWithValue("@Price", cartItem.Price);
+                            com.Parameters.AddWithValue("@Book_ID", cartItem.Book_ID);
+                            com.Parameters.AddWithValue("@Quantity", cartItem.Count);
+                            com.ExecuteNonQuery();  
 
-                com.Parameters.AddWithValue("@Name", TextBox2.Text);
-                com.Parameters.AddWithValue("@Address", TextBox1.Text);
-                com.Parameters.AddWithValue("@Phone_Number", TextBox3.Text);
-                com.Parameters.AddWithValue("@Price", cartItem.Price);
-                com.Parameters.AddWithValue("@Book_ID",cartItem.Book_ID);
-                com.Parameters.AddWithValue("@Quantity",cartItem.Count);
-                con.Close();
+                        }
+                    }
+                    con.Close();
+                }
             }
             lblMsg.Text = "Your order is successfully confirmed";
+            Session.Remove("cart");
         }
+
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             if (Session["cart"] != null)
             {
                 Session.Remove("cart");
-                Response.Redirect("Mainpage.aspx");            
-
             }
-            if (Session["cart"] == null)
-            {
-                Response.Redirect("Mainpage.aspx");
-            }
-
+            Response.Redirect("Mainpage.aspx");
         }
     }
 }
