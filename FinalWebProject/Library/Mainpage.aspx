@@ -19,16 +19,14 @@
         {   
             margin-left: auto;
             margin-right: auto;
-            border-collapse: collapse;
-            height: 94px;
-            margin-top: 0px;
-            width: 1178px;
+          
+            
         }
         
         th, td
         {
-            border: 2px solid #dddddd;
-            padding: 8px;
+            
+           
             text-align: left;
         }
         
@@ -119,14 +117,16 @@
             <div style="text-align:center">
                 <asp:TextBox ID="TextBox1" runat="server" Height="52px" OnTextChanged="TextBox1_TextChanged"
                 Placeholder="Enter Book Name or Author Name to search" Style="text-align: center;
-                margin-left: auto; margin-right: auto;" Width="861px" AutoPostBack="True"></asp:TextBox>
+                margin-left: auto; margin-right: auto;" Width="871px" AutoPostBack="True"></asp:TextBox>
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Search" 
                     Width="309px" Style="text-align: center; font-size:20pt"
                 Height="57px" />
         </div>
         <asp:GridView ID="GridView1" runat="server" DataKeyNames="Book_ID" AutoGenerateSelectButton="True"
-            OnRowCommand="GridView1_RowCommand" SelectionMode="Single" Width="1184px" CellPadding="4"
-            ForeColor="#333333" GridLines="None" EnablePersistedSelection="True">
+            OnRowCommand="GridView1_RowCommand" SelectionMode="Single" 
+        Width="1184px" CellPadding="4"
+            ForeColor="#333333" GridLines="None" EnablePersistedSelection="True" 
+        onselectedindexchanged="GridView1_SelectedIndexChanged1">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -139,6 +139,17 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
+        <div style="text-align:center">
+
+            <br />
+            <br />
+
+            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Black" style="font-size:18pt"
+                NavigateUrl="~/Library/Booktable.aspx">The available books are here</asp:HyperLink>
+                <br />
+            
+
+        </div>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:booktable %>"
             SelectCommand="SELECT * FROM [Booktable]" OnSelecting="SqlDataSource1_Selecting">
         </asp:SqlDataSource>

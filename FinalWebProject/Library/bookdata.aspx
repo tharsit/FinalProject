@@ -14,8 +14,7 @@
         {
             margin-left: auto;
             margin-right: auto;
-            border-collapse: collapse;
-            width: 100%;
+            
         }
 
         th, td {
@@ -65,14 +64,15 @@
         <hr />
             <table>
             <tr>
-                <td class="style3" style="text-align:right"><asp:Label ID="Label4"  runat="server" style="font-size: 18pt;" Text="BookName"></asp:Label> </td>
+                <td class="style3" style="text-align:center"><asp:Label ID="Label4"  runat="server" style="font-size: 18pt;" Text="BookName"></asp:Label> </td>
                  <td ><asp:TextBox ID="TextBox2" runat="server" style="font-size: 18pt;" Height="50px" Width="300px" 
                          ontextchanged="TextBox2_TextChanged"></asp:TextBox></td>   
             </tr>
              <tr>
-                 <td class="style4"style="text-align:right"><asp:Label ID="Label3"  runat="server" style="font-size: 18pt;" Text="Category"></asp:Label></td>
+                 <td class="style4"style="text-align:center"><asp:Label ID="Label3"  runat="server" style="font-size: 18pt;" Text="Category"></asp:Label></td>
                  <td class="style5">
-                     <asp:DropDownList ID="DropDownList1" runat="server">
+                     <asp:DropDownList ID="DropDownList1" style="font-size:15pt" runat="server" 
+                         Width="292px">
                          <asp:ListItem Value="Fantascy">Fantascy</asp:ListItem>
                          <asp:ListItem Value="Fiction">Fiction</asp:ListItem>
                          <asp:ListItem Value="Non-Fiction">Non-Fiction</asp:ListItem>
@@ -97,12 +97,12 @@
                  </td>
              </tr>
               <tr>
-                  <td class="style3" style="text-align:right"><asp:Label ID="Label2"  runat="server" style="font-size: 18pt;" Text="Author"></asp:Label></td>
+                  <td class="style3" style="text-align:center"><asp:Label ID="Label2"  runat="server" style="font-size: 18pt;" Text="Author"></asp:Label></td>
                  <td><asp:TextBox ID="TextBox3" runat="server" Height="50px" Width="300px"></asp:TextBox></td>
              </tr>
 
               <tr>
-                 <td class="style3" style="text-align:right"><asp:Label ID="Label1"  runat="server" style="font-size: 18pt;" Text="Price"></asp:Label></td>
+                 <td class="style3" style="text-align:center"><asp:Label ID="Label1"  runat="server" style="font-size: 18pt;" Text="Price"></asp:Label></td>
                  <td><asp:TextBox ID="TextBox4" runat="server" Height="50px" Width="300px"></asp:TextBox></td>
              </tr>
              

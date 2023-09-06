@@ -11,19 +11,9 @@
               margin-left: auto;
             margin-right: auto;
              }
-     .containerClass {
-  position: relative;
-}
+     
 
-.btnConfirmClass {
-    margin-left: auto;
-            margin-right: auto;
-}
 
-.btnCancelClass {
-    margin-left: auto;
-            margin-right: auto;
-}
 
         </style>
 </head>
@@ -44,7 +34,7 @@
        
    <div style="text-align:center">
    
-        <asp:Label ID="Label6" runat="server" ForeColor="#009933" Style="font-size:15pt" Text="You can see your selected books here"></asp:Label>
+        
    
         <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" 
             GridLines="None" Width="1032px">
@@ -61,10 +51,20 @@
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
     </div>
+    <br />
+    <br />
     <div style="text-align:center">
-        <asp:Label ID="lblconfirm" runat="server" ForeColor="#009933" Style="font-size:15pt"
+        <asp:Label ID="lblconfirm" runat="server"  Style="font-size:15pt"
             Text="Check your selected books are correct!"></asp:Label>
+            </div>
+             <div style="text-align:center">
+            <asp:Label ID="Label4" runat="server"  Style="font-size:15pt"
+            Text="Our system is allowed only with cash on delivery" ></asp:Label>
+            </div>
+    
         <br />
+        
+         
 
         <table>
         <tr>
@@ -77,7 +77,7 @@
          <tr>
         <td> <asp:Label ID="Label1" runat="server"  Style=" font-size:15pt"
             Text="Address"></asp:Label></td>
-             <td><asp:TextBox ID="TextBox1" runat="server" Height="50px" Width="300px"  Style=" font-size:15pt"
+             <td ><asp:TextBox ID="TextBox1" runat="server" Height="50px" Width="300px"  Style=" font-size:15pt"
                         ></asp:TextBox></td>
         
         </tr>
@@ -94,26 +94,25 @@
         <td > <asp:Label ID="Label3" runat="server"  Style=" font-size:15pt"
             Text="Total Amount"></asp:Label></td>
             <td>
-                <asp:TextBox ID="txtTotal" runat="server" Height="50px" Width="300px" ReadOnly="True"  Style=" font-size:15pt"
+                <asp:TextBox ID="txtTotal" runat="server" Height="62px" Width="300px" 
+                    ReadOnly="True"  Style=" font-size:15pt"
                         ></asp:TextBox>
             </td>
         </tr>
         </table>
-    </div>
+        
     
-    <div style="text-align:center">
-            <asp:Label ID="Label4" runat="server" ForeColor="#009933" Style="font-size:15pt"
-            Text="Our system is allowed only with cash on delivery" ></asp:Label>
-            </div>
+        <br />
              <div style="text-align:center">
-                <asp:Label ID="lblMsg" runat="server" Style="font-size:15pt" ForeColor="#3366FF"></asp:Label>
+                <asp:Label ID="lblMsg" runat="server" Style="font-size:18pt" ForeColor="Black"></asp:Label>
             </div>
               
+              <br />
             <table>
             <tr>
                 <td style="text-align:left">
                 <asp:Button ID="btnConfirm" runat="server"  Style=" font-size:15pt"
-        onclick="btnConfirm_Click" Text="Confirm" Height="53px" ForeColor="#009900" />
+        onclick="btnConfirm_Click" Text="Confirm" Height="53px"  />
         </td>
                 <td style="text-align:right"> 
                     <asp:Button ID="btnCancel" runat="server"  Style=" font-size:15pt"

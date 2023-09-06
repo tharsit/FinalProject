@@ -16,8 +16,7 @@
         {
               margin-left: auto;
             margin-right: auto;
-            border-collapse: collapse;
-            width: 100%;
+           
         }
 
         th, td {

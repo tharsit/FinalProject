@@ -38,7 +38,7 @@ namespace FinalWebProject.Library
                 }
                 else
                 {
-                    // Validate email format
+                    
                     if (!IsValidEmail(TextBox2.Text))
                     {
                         lblMsg.Text = "Please enter a valid email address.";

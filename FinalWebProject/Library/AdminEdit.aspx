@@ -41,10 +41,11 @@
         <table style="margin-left: auto; margin-right: auto;">
             <tr>
                 <td>
-                    <asp:TextBox ID="txtSearch" runat="server" Height="28px" Width="500px"></asp:TextBox>
+                    <asp:TextBox ID="txtSearch" runat="server" Height="46px" Width="572px"></asp:TextBox>
                 </td>
                 <td>
-                    <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
+                    <asp:Button ID="btnSearch" runat="server" Text="Search" 
+                        OnClick="btnSearch_Click" Height="51px" Width="118px" />
                 </td>
             </tr>
         </table>
@@ -54,7 +55,7 @@
             OnRowEditing="AdminTable_RowEditing" OnRowCancelingEdit="AdminTable_RowCancelingEdit"
             OnRowUpdating="AdminTable_RowUpdating" 
             OnSelectedIndexChanged="AdminTable_SelectedIndexChanged" CellPadding="4" 
-            ForeColor="#333333" GridLines="None"
+            ForeColor="#333333" GridLines="None" Height="305px" Width="886px"
             >
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>

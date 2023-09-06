@@ -148,5 +148,10 @@ namespace FinalWebProject.Library
         {
             Response.Redirect("Confirm.aspx");
         }
+
+        protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

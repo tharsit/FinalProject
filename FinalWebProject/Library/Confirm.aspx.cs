@@ -48,6 +48,7 @@ namespace FinalWebProject.Library
             foreach (CartItem cartItem in cartItems)
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString);
+             
                 Book_id = cartItem.Book_ID;
                 Quantity = cartItem.Count;
                 int totalItemPrice = cartItem.Price * cartItem.Count;

@@ -35,19 +35,19 @@
         <table style = "margin-left : auto ; margin-right : auto;">
             <tr>
                 <td>
-                    <asp:Button ID="btnAddBook" runat="server" Text="Add Books" Width="150px" 
-                        onclick="btnAddBook_Click" />
+                    <asp:Button ID="btnAddBook" runat="server" Text="Add Books" Width="200px" 
+                        onclick="btnAddBook_Click" Height="50px" />
                 </td>
                 <td>
                     <asp:Button ID="btnEditBook" runat="server" Text="Edit Books" 
-                        style="margin-left: 0px" Width="150px" onclick="btnEditBook_Click" 
+                        style="margin-left: 0px" Width="200px" onclick="btnEditBook_Click" Height="50px" 
                        />
                 </td>
             </tr>
             <tr>
                 <td colspan = 2>
-                    <asp:Button ID="btnDelete" runat="server" Text="Delete Books" Width="300px" 
-                        onclick="btnDelete_Click" />
+                    <asp:Button ID="btnDelete" runat="server" Text="Delete Books" Width="400px" 
+                        onclick="btnDelete_Click" Height="50px" />
                 </td>              
             </tr>
         </table>
@@ -58,22 +58,30 @@
         <table style = "margin-left : auto ; margin-right : auto;">
             <tr>
                 <td>
-                    <asp:Button ID="btnAddAdmins" runat="server" Text="Add Admins" Width="150px" 
-                        onclick="btnAddAdmins_Click" />
+                    <asp:Button ID="btnAddAdmins" runat="server" Text="Add Admins" Width="200px" 
+                        onclick="btnAddAdmins_Click" Height="51px" />
                 </td>
                 <td>
                     <asp:Button ID="btnEditAdmins" runat="server" Text="Edit Admins" 
-                        Width="150px" onclick="btnEditAdmins_Click" />
+                        Width="201px" onclick="btnEditAdmins_Click" Height="50px" />
                 </td>
             </tr>
             <tr>
                 <td colspan = 2>
                     <asp:Button ID="btnDeleteAdmins" runat="server" Text="Delete Admins" 
-                        Width="300px" onclick="btnDeleteAdmins_Click" />
+                        Width="401px" onclick="btnDeleteAdmins_Click" Height="51px" />
                 </td>              
             </tr>
         </table>
 
+    </div>
+    <br />
+    <br />
+    <div style="text-align:center">
+        
+        <asp:Button ID="btnBack" runat="server" Text="Back" Height="50px" 
+            onclick="btnBack_Click" Width="200px" />
+        
     </div>
     </form>
 </body>

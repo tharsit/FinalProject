@@ -43,5 +43,10 @@ namespace FinalWebProject.Library
         {
             Response.Redirect("AdminDelete.aspx");
         }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Mainpage.aspx");
+        }
     }
 }
