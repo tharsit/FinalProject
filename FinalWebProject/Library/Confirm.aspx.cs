@@ -41,39 +41,47 @@ namespace FinalWebProject.Library
             }
         }
 
-      protected void btnConfirm_Click(object sender, EventArgs e)
-{
-    List<CartItem> cartItems = (List<CartItem>)Session["cart"];
-    if (cartItems != null && TextBox1 != null && TextBox2 != null && TextBox3 != null)
-    {
-        using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString))
+        protected void btnConfirm_Click(object sender, EventArgs e)
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT MAX(Order_No) FROM Sales", con);
-            int lastOrderNumber = (int)cmd.ExecuteScalar();
-            int newOrderNumber = lastOrderNumber + 1;
-            
-            foreach (CartItem cartItem in cartItems)
+            List<CartItem> cartItems = (List<CartItem>)Session["cart"];
+            if (cartItems != null && TextBox1 != null && TextBox2 != null && TextBox3 != null)
             {
-                string insert = "insert into Sales(Customer_Name,Address,Phone_Number,Book_ID,Quantity,Order_Date,Order_No) values (@Name,@Address,@Phone_Number,@Book_ID,@Quantity,@Order_Date,@Order_Number)";
-                using (SqlCommand com = new SqlCommand(insert, con))
+                using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString))
                 {
-                    com.Parameters.AddWithValue("@Name", TextBox2.Text);
-                    com.Parameters.AddWithValue("@Address", TextBox1.Text);
-                    com.Parameters.AddWithValue("@Phone_Number", TextBox3.Text);
-                    com.Parameters.AddWithValue("@Book_ID", cartItem.Book_ID);
-                    com.Parameters.AddWithValue("@Quantity", cartItem.Count);
-                    com.Parameters.AddWithValue("@Order_Date", DateTime.Today);
-                    com.Parameters.AddWithValue("@Order_Number", newOrderNumber);
-                    com.ExecuteNonQuery();  
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT MAX(Order_No) FROM Sales", con);
+                    int lastOrderNumber = (int)cmd.ExecuteScalar();
+                    int newOrderNumber = lastOrderNumber + 1;
+
+                    foreach (CartItem cartItem in cartItems)
+                    {
+                        string insert = "insert into Sales(Customer_Name,Address,Phone_Number,Book_ID,Quantity,Order_Date,Order_No) values (@Name,@Address,@Phone_Number,@Book_ID,@Quantity,@Order_Date,@Order_Number)";
+                        using (SqlCommand com = new SqlCommand(insert, con))
+                        {
+                            com.Parameters.AddWithValue("@Name", TextBox2.Text);
+                            com.Parameters.AddWithValue("@Address", TextBox1.Text);
+                            com.Parameters.AddWithValue("@Phone_Number", TextBox3.Text);
+                            com.Parameters.AddWithValue("@Book_ID", cartItem.Book_ID);
+                            com.Parameters.AddWithValue("@Quantity", cartItem.Count);
+                            com.Parameters.AddWithValue("@Order_Date", DateTime.Today);
+                            com.Parameters.AddWithValue("@Order_Number", newOrderNumber);
+                            com.ExecuteNonQuery();
+                        }
+                    }
+                    con.Close();
                 }
+                lblMsg.Text = "Your order is successfully confirmed";
+                lblMsg.ForeColor = System.Drawing.Color.Black;
+                Session.Remove("cart");
             }
-            con.Close();
+            else
+            {
+                lblMsg.Text = "Please order something first";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+            }
+
+
         }
-    }
-    lblMsg.Text = "Your order is successfully confirmed";
-    Session.Remove("cart");
-}
 
 
         protected void btnCancel_Click(object sender, EventArgs e)
