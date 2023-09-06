@@ -48,5 +48,10 @@ namespace FinalWebProject.Library
         {
             Response.Redirect("Mainpage.aspx");
         }
+
+        protected void btnSale_OnClick(object sender, EventArgs e)
+        {
+            Response.Redirect("Sale_Data.aspx");
+        }
     }
 }

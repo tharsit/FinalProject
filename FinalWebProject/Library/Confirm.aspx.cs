@@ -49,13 +49,13 @@ namespace FinalWebProject.Library
         using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["booktable"].ConnectionString))
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT MAX(Order_No) FROM CustomerData", con);
+            SqlCommand cmd = new SqlCommand("SELECT MAX(Order_No) FROM Sales", con);
             int lastOrderNumber = (int)cmd.ExecuteScalar();
             int newOrderNumber = lastOrderNumber + 1;
             
             foreach (CartItem cartItem in cartItems)
             {
-                string insert = "insert into CustomerData(Customer_Name,Address,Phone_Number,Book_ID,Quantity,Order_Date,Order_No) values (@Name,@Address,@Phone_Number,@Book_ID,@Quantity,@Order_Date,@Order_Number)";
+                string insert = "insert into Sales(Customer_Name,Address,Phone_Number,Book_ID,Quantity,Order_Date,Order_No) values (@Name,@Address,@Phone_Number,@Book_ID,@Quantity,@Order_Date,@Order_Number)";
                 using (SqlCommand com = new SqlCommand(insert, con))
                 {
                     com.Parameters.AddWithValue("@Name", TextBox2.Text);

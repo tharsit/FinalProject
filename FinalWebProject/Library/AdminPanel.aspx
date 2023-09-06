@@ -75,6 +75,18 @@
         </table>
 
     </div>
+    <div >
+    <h1 style = "text-align : center;"> Operations Related With Admins</h1>
+        <table style = "margin-left : auto ; margin-right : auto;">
+            <tr>
+                <td>
+                    <asp:Button ID="btnSale" runat="server" Text=" Sale Record" Width="200px" 
+                        onclick="btnSale_OnClick" Height="51px" />
+                </td>                
+            </tr>           
+        </table>
+
+    </div>
     <br />
     <br />
     <div style="text-align:center">

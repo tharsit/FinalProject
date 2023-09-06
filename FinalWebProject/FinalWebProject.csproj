@@ -79,7 +79,7 @@
     <Content Include="Library\BookDelete.aspx" />
     <Content Include="Library\Booktable.aspx" />
     <Content Include="Library\Confirm.aspx" />
-    <Content Include="Library\Customerdata.aspx" />
+    <Content Include="Library\Sale_Data.aspx" />
     <Content Include="Library\BookEdit.aspx" />
     <Content Include="Library\Mainpage.aspx" />
     <Content Include="Library\pwrecover.aspx" />
@@ -190,12 +190,12 @@
     <Compile Include="Library\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Library\Customerdata.aspx.cs">
-      <DependentUpon>Customerdata.aspx</DependentUpon>
+    <Compile Include="Library\Sale_Data.aspx.cs">
+      <DependentUpon>Sale_Data.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Library\Customerdata.aspx.designer.cs">
-      <DependentUpon>Customerdata.aspx</DependentUpon>
+    <Compile Include="Library\Sale_Data.aspx.designer.cs">
+      <DependentUpon>Sale_Data.aspx</DependentUpon>
     </Compile>
     <Compile Include="Library\BookEdit.aspx.cs">
       <DependentUpon>BookEdit.aspx</DependentUpon>
