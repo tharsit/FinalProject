@@ -79,6 +79,7 @@
     <Content Include="Library\BookDelete.aspx" />
     <Content Include="Library\Booktable.aspx" />
     <Content Include="Library\Confirm.aspx" />
+    <Content Include="Library\Invoice.aspx" />
     <Content Include="Library\Sale_Data.aspx" />
     <Content Include="Library\BookEdit.aspx" />
     <Content Include="Library\Mainpage.aspx" />
@@ -189,6 +190,13 @@
     </Compile>
     <Compile Include="Library\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Invoice.aspx.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Library\Invoice.aspx.designer.cs">
+      <DependentUpon>Invoice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Library\Sale_Data.aspx.cs">
       <DependentUpon>Sale_Data.aspx</DependentUpon>

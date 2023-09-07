@@ -72,7 +72,8 @@ namespace FinalWebProject.Library
                 }
                 lblMsg.Text = "Your order is successfully confirmed";
                 lblMsg.ForeColor = System.Drawing.Color.Black;
-                Session.Remove("cart");
+                Session["cart"] = cartItems;
+                Response.Redirect("Invoice.aspx");
             }
             else
             {
