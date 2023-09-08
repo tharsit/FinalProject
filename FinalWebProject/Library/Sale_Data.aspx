@@ -78,12 +78,12 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
         ConnectionString="<%$ ConnectionStrings:booktable %>" 
         
-        SelectCommand="SELECT Sale_ID,Customer_Name,Address,Phone_Number,S.Book_ID,BT.BookName,Quantity,(S.Quantity * BT.Price) AS Total_Price,Order_No,Order_Date FROM [Sales] AS S LEFT JOIN [booktable] AS BT ON S.Book_ID = BT.Book_ID"></asp:SqlDataSource>
+        SelectCommand="SELECT Sale_ID,Customer_Name,Address,Phone_Number,S.Book_ID,BT.BookName,Quantity,(S.Quantity * BT.Price) AS Total_Price,Order_No,Order_Date FROM [Sales] AS S JOIN [booktable] AS BT ON S.Book_ID = BT.Book_ID ORDER BY Sale_ID DESC"></asp:SqlDataSource>
         <div>
             <table style = "margin-left : auto ; margin-right : auto ;">
                 <tr>
                 <td>
-                    <asp:Button ID="btnBack" runat="server" Height="50px" onclick="btnBack_Click" 
+                    <asp:Button ID="btnBack" runat="server" Height="50px" onclick="btnBack_Click"  
                         Text="Back" Width="200px" />
                 </td>
                 </tr>
